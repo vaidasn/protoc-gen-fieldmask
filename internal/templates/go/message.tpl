@@ -30,7 +30,7 @@
         // exists in the {{ $inMessageName }}.{{ $fmFieldName }} or not.
         func (x *{{ $inMessageName }}_FieldMask) {{ $maskedFuncName }}() bool {
               if x.mask == nil {
-                  return false
+                  return true
               }
 
               return x.mask.Masked("{{ $fieldPathKey }}")
